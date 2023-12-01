@@ -1,0 +1,335 @@
+/* Global styles ============= */
+
+:root {
+  --brand-color: #ffe000;
+  --white: #fff;
+  --background-yellow: #fdc949;
+  --black: #000;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Muli", "Helvetica", "Arial", "sans-serif";
+}
+
+a {
+  color: #fdcc52;
+  transition: all 0.35s;
+}
+
+a:hover,
+a:focus {
+  color: #fcbd20;
+}
+
+hr {
+  max-width: 100px;
+  margin: 25px auto 0;
+  border-width: 1px;
+  border-color: rgba(34, 34, 34, 0.1);
+}
+
+hr.light {
+  border-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Catamaran", "Helvetica", "Arial", "sans-serif";
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section h2 {
+  font-size: 50px;
+}
+
+.pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.catamaran {
+  font-family: "Catamaran", "Helvetica", "Arial", "sans-serif";
+}
+
+.white-color {
+  color: var(--white);
+}
+
+/* Navigation */
+
+#mainNav a.navbar-brand {
+  position: relative;
+  color: var(--brand-color);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: normal;
+  -webkit-text-stroke: 10px black; /* 2px black text stroke for WebKit browsers */
+  background-clip: text;
+  padding: 10px;
+}
+
+#mainNav a.navbar-brand:before {
+  content: "Travel California";
+  position: absolute;
+  left: 0px;
+  -webkit-text-stroke: 0px black;
+}
+
+#mainNav .navbar-nav li a {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.63px;
+  transform: scale(1);
+  transition: transform 0.2s ease-in, color 0.2s ease-in;
+}
+
+#mainNav .navbar-nav li a:hover {
+  transform: scale(1.05);
+  color: var(--brand-color);
+  transition: transform 0.2s ease-in, color 0.2s ease-in;
+}
+
+/* Hero section (Header) */
+
+.masthead {
+  margin-top: -81px;
+  height: 1080px;
+  background: url("../images/bg-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.masthead .masthead-txt {
+  padding-left: 125px;
+}
+.masthead .masthead-heading {
+  color: var(--white);
+  font-size: 68px;
+  line-height: 102.5%;
+}
+.masthead .masthead-heading strong {
+  font-weight: 700;
+}
+
+.masthead .masthead-btn:hover {
+  border-color: #fcbd20 !important;
+}
+.masthead-img {
+  padding-top: 110px;
+  max-width: 443px;
+}
+
+/* Main content */
+/* Download section */
+#download {
+  background: var(--background-yellow);
+}
+
+#download .download-heading {
+  font-size: 100px;
+  color: var(--black);
+  font-weight: 300;
+  line-height: 113%;
+  letter-spacing: -0.5px;
+}
+
+#download .download-txt {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 113%;
+  letter-spacing: -0.5px;
+}
+
+/* Testimonials */
+#features h2 {
+  font-size: 69px;
+  font-weight: 300;
+  line-height: 113%;
+  padding: 0 12px;
+}
+#features .back-image {
+  position: absolute;
+  top: 7px;
+  opacity: 0.5;
+  filter: blur(5px);
+  z-index: 1;
+}
+#features .main-image {
+  z-index: 2;
+}
+#features .card-title,
+#features .card-text {
+  font-family: "Catamaran", "Helvetica", "Arial", "sans-serif";
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 113%;
+  letter-spacing: 0.52px;
+}
+
+/* Sign up */
+#signup {
+  background: url("../images/SF.png");
+  height: 709px;
+}
+#signup:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+}
+#signup h2 {
+  position: relative;
+  font-size: 64px;
+  font-weight: 400;
+  z-index: 2;
+}
+#signup .input-group-text {
+  background: var(--background-yellow);
+  border: none;
+  font-size: 24px;
+  color: #4d4d4d;
+}
+
+#signup input::placeholder {
+  text-transform: uppercase;
+  font-family: "Catamaran", "Helvetica", "Arial", "sans-serif";
+  font-size: 24px;
+  color: #4d4d4d;
+}
+#signup button {
+  position: relative;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1.14px;
+  line-height: 1;
+  z-index: 2;
+}
+
+/* Contact */
+.social-icons i {
+  background: #4d4d4d;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--background-yellow);
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+#contact .card-body a {
+  color: #0d6efd;
+}
+/* Footer */
+footer {
+  background: #313131;
+}
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  /* Hero section */
+  .masthead {
+    height: 880px;
+  }
+  .masthead .masthead-txt {
+    padding-left: 12px;
+  }
+  .masthead .masthead-heading {
+    font-size: 48px;
+  }
+  .masthead-img {
+    max-width: 343px;
+  }
+
+  /* Download */
+  #download .download-heading {
+    font-size: 60px;
+  }
+
+  #download .download-txt {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .masthead {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  .masthead .masthead-txt {
+    padding: 0 50px;
+  }
+  .masthead .masthead-heading {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .masthead {
+    margin-top: -124px;
+  }
+  /* Testimonials */
+  #features h2 {
+    font-size: 50px;
+  }
+  /* Sing up */
+  #signup h2 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 576px) {
+  /* Navigation */
+  #mainNav .navbar-nav li a {
+    font-size: 14px;
+  }
+  /* Download */
+  #download img {
+    max-width: 160px;
+  }
+
+  #download .download-heading {
+    font-size: 40px;
+  }
+
+  #download .download-txt {
+    font-size: 14px;
+  }
+  /* Testimonials */
+  #features h2 {
+    font-size: 40px;
+  }
+  /* Sing up */
+  #signup h2 {
+    font-size: 40px;
+  }
+  #signup input::placeholder {
+    font-size: 16px;
+  }
+  #signup button {
+    font-size: 16px;
+  }
+}
